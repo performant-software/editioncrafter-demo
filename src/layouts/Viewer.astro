@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Container from '../components/Container.astro';
+import { Image } from 'astro:assets';
+import leftArrow from '../assets/arrow-left.svg';
+import EditionCrafter from "@cu-mkp/editioncrafter";
+
+export interface Props {
+    title: string,
+    documentName: string,
+    transcriptionTypes: any,
+    iiifManifest: string,
+    glossaryURL?: string,
+    documentInfo?: any,
+    threePanel?: boolean
+}
+
+const { title, documentName, transcriptionTypes, iiifManifest, documentInfo, threePanel, glossaryURL } = Astro.props;
+
+---
+
+<Layout title={title} transitions={false}>
+    
+    <div class="w-full h-[80dvh] bg-white">
+        <EditionCrafter
+            documentName={documentName}
+            documentInfo={documentInfo}
+            transcriptionTypes={transcriptionTypes}
+            iiifManifest={iiifManifest}
+            glossaryURL={glossaryURL}
+            threePanel={threePanel}
+            client:only
+            transition:persist
+        />
+    </div>
+</Layout>
