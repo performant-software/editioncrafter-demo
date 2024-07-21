@@ -1,13 +1,18 @@
 ---
-import Viewer from "../layouts/Viewer.astro";
+import Layout from '../layouts/Layout.astro';
+import EditionCrafter from "@cu-mkp/editioncrafter";
 ---
 
-<Viewer
-    documentName='FHL_007548733_TAOS_BAPTISMS_BATCH_2'
-    transcriptionTypes={{
-    translation: 'Translation',
-    transcription: 'Transcription',
-    }}
-    iiifManifest='https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/manifest.json'
-    title="Native Bound Unbound"
-/>
+<Layout title="Native Bound Unbound">
+    <div class="w-full h-[80dvh] bg-white">
+        <EditionCrafter
+            documentName='Taos Baptisms'
+            transcriptionTypes={{
+                translation: 'Translation',
+                transcription: 'Transcription',
+            }}
+            iiifManifest='https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/manifest.json'
+            client:only
+        />
+    </div>
+</Layout>
