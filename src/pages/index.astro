@@ -3,15 +3,15 @@ import Layout from '../layouts/Layout.astro';
 import EditionCrafter from "@cu-mkp/editioncrafter";
 ---
 
-<Layout title="Native Bound Unbound">
+<Layout title="Domenico Edition">
     <div class="w-full h-[80dvh] bg-white">
         <EditionCrafter
-            documentName='Taos Baptisms'
+            documentName='Domenico'
             transcriptionTypes={{
                 translation: 'Translation',
                 transcription: 'Transcription',
             }}
-            iiifManifest='https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/manifest.json'
+            iiifManifest='https://cu-mkp.github.io/domenico-editioncrafter-data/texts/domenico-edition/iiif/manifest.json'
             client:only
         />
     </div>
