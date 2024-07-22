@@ -8,5 +8,5 @@ import mdx from "@astrojs/mdx";
 export default defineConfig({
   integrations: [tailwind(), react(), mdx()],
   site: 'https://cu-mkp.github.io',
-  base: '/editioncrafter'
+  base: '/'
 });
